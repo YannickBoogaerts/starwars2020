@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scenario[] menu = new Scenario[]{
-                new Scenario1()
+                new Scenario1(),
+                new Scenario2(),
+                new Scenario3()
         };
         Scanner scan = new Scanner(System.in);
         String input = null;
