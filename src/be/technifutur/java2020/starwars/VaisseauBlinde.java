@@ -4,6 +4,7 @@ public class VaisseauBlinde {
    private String name = "Sans nom";
    private int nbMissile;
    private boolean enVol = false;
+   private static int nbVol = 0;
 
    public VaisseauBlinde(String name){
       super();
@@ -43,6 +44,7 @@ public class VaisseauBlinde {
       if(! this.enVol){
          this.enVol = true;
          System.out.println("je décolle");
+         VaisseauBlinde.nbVol++;
       } else {
          System.out.println("déjà en vol");
       }
@@ -52,9 +54,13 @@ public class VaisseauBlinde {
       if( this.enVol){
          this.enVol = false;
          System.out.println("j'atterris");
+         VaisseauBlinde.nbVol--;
       } else {
          System.out.println("déjà au sol");
       }
    }
-   
+
+   public static int getNbVol(){
+      return VaisseauBlinde.nbVol;
+   }
 }
