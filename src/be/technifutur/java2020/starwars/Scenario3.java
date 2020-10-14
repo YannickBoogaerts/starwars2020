@@ -12,6 +12,7 @@ public class Scenario3 extends Scenario {
         BlackStar bs = new BlackStar();
         Millenium millenium = new Millenium();
         Xwing xwing = new Xwing();
+        //AbstractVaisseau test = new AbstractVaisseau("");
         AbstractVaisseau abs = new Millenium();
 
         bs.attract(abs);
